@@ -5,11 +5,8 @@ import { bindActionCreators } from 'redux';
 import { completeTask } from '../actions/index';
 import Summary from './summary';
 import Search from './search';
-<<<<<<< HEAD
 import Notification from './notification';
-=======
 import Tasks from './tasks';
->>>>>>> Add tasks
 import './app.css';
 
 function mapDispatchToProps(dispatch) {

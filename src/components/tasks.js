@@ -46,7 +46,7 @@ export class Tasks extends React.Component {
               </svg>
             </div>
 
-            <strike>Become pre-approved for your finance</strike>
+            <strike>Get pre-approved for finance</strike>
           </p>
           :
           <p>
@@ -57,7 +57,7 @@ export class Tasks extends React.Component {
               </svg>
             </div>
 
-            Become pre-approved for your finance
+            Get pre-approved for finance
           </p>
           }
 
