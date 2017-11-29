@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { completeTask } from '../actions/index';
 
@@ -17,11 +16,6 @@ function mapStateToProps(state) {
 }
 
 export class YourCars extends React.Component {
-  constructor(props) {
-    super(props);
-    console.log(props);
-  }
-
   render() {
     return (
       <p>YourCars</p>

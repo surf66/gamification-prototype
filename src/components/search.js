@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { completeTask } from '../actions/index';
+import VehicleCard from './vehicle-card';
 
 function mapDispatchToProps(dispatch) {
   return ({
@@ -17,14 +17,9 @@ function mapStateToProps(state) {
 }
 
 export class Search extends React.Component {
-  constructor(props) {
-    super(props);
-    console.log(props);
-  }
-
   render() {
     return (
-      <p>Search</p>
+      <VehicleCard />
     );
   }
 }

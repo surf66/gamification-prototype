@@ -8,4 +8,9 @@ let initialState = {
 
 const store = createStore(reducer, initialState);
 
+store.subscribe(() => {
+  let state = store.getState();
+  console.log(state);
+})
+
 export default store;

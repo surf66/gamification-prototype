@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { completeTask } from '../actions/index';
 
@@ -12,19 +11,16 @@ function mapDispatchToProps(dispatch) {
 
 function mapStateToProps(state) {
   return {
-    tasks: state.tasks,
+    tasks: state.tasks
   }
 }
 
 export class Summary extends React.Component {
-  constructor(props) {
-    super(props);
-    console.log(props);
-  }
-
   render() {
     return (
-      <p>Summary</p>
+      <div>
+        <p>Summary</p>
+      </div>
     );
   }
 }
