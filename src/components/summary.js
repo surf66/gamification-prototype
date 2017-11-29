@@ -29,7 +29,7 @@ export class Summary extends React.Component {
     return (
       <div>
         <div className="profile">
-          <img className="profile-image" src="./images/james.png" alt="James" />
+          <a href="/tasks"><img className="profile-image" src="./images/james.png" alt="James" /></a>
           <p><strong>Welcome back James</strong></p>
         </div>
         {this.props.tasks.shortlistVehicle &&

@@ -4,9 +4,12 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { completeTask } from '../actions/index';
 import Summary from './summary';
-import YourCars from './your-cars';
 import Search from './search';
+<<<<<<< HEAD
 import Notification from './notification';
+=======
+import Tasks from './tasks';
+>>>>>>> Add tasks
 import './app.css';
 
 function mapDispatchToProps(dispatch) {
@@ -64,17 +67,6 @@ export class App extends React.Component {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/your-cars">
-                        <span className="icon">
-                          <svg className="fill-dark-grey">
-                            <title>Your Cars</title>
-                            <use xlinkHref="#icon-your-cars"></use>
-                          </svg>
-                        </span>
-                        <span className="tab-label">Your cars</span>
-                      </Link>
-                    </li>
-                    <li>
                       <Link to="/search">
                         <span className="icon">
                           <svg className="fill-dark-grey">
@@ -85,6 +77,11 @@ export class App extends React.Component {
                         <span className="tab-label">Search</span>
                       </Link>
                     </li>
+                    <li>
+                      <Link to="/tasks">
+                        <span className="tab-label">Tasks</span>
+                      </Link>
+                    </li>
                   </ul>
                 </nav>
               </div>
@@ -92,8 +89,8 @@ export class App extends React.Component {
             <section>
               <div className="container">
                 <Route exact path="/" component={Summary}/>
-                <Route path="/your-cars" component={YourCars}/>
                 <Route path="/search" component={Search}/>
+                <Route path="/tasks" component={Tasks} />
               </div>
             </section>
           </div>
