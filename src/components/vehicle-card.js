@@ -20,6 +20,7 @@ export class VehicleCard extends React.Component {
     super(props);
 
     this._addToShortlist = this._addToShortlist.bind(this);
+    this._enquire = this._enquire.bind(this);
   }
 
   render() {
@@ -55,21 +56,30 @@ export class VehicleCard extends React.Component {
             </a>
           </div>
         </div>
-        <button className="secondary fixed-width" onClick={this._addToShortlist}>
-          <div className="icon">
-            <svg className="fill-dark-blue">
-              <title>Favourite</title>
-              <use xlinkHref="#icon-favourite"></use>
-            </svg>
+        {!this.props.hideCtas &&
+          <div>
+            <button className="secondary fixed-width spacer" onClick={this._addToShortlist}>
+              <div className="icon">
+                <svg className="fill-dark-blue">
+                  <title>Favourite</title>
+                  <use xlinkHref="#icon-favourite"></use>
+                </svg>
+              </div>
+              <span>Add Favourite</span>
+            </button>
+            <button className="fixed-width" onClick={this._enquire}>Enquire</button>
           </div>
-          <span>Add Favourite</span>
-        </button>
+        }
       </div>
     );
   }
 
   _addToShortlist() {
-    this.props.completeTask("shortlistVehicle");
+    this.props.completeTask('shortlistVehicle');
+  }
+
+  _enquire() {
+    this.props.completeTask('vehicleEnquiry');
   }
 }
 
