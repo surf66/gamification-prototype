@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { completeTask } from '../actions/index';
 import VehicleCard from './vehicle-card';
+import ProfileCircle from './profile-circle';
 import './summary.css';
 
 function mapDispatchToProps(dispatch) {
@@ -28,17 +29,19 @@ export class Summary extends React.Component {
   render() {
     return (
       <div>
-        <div className="profile">
-          <a href="/tasks"><img className="profile-image" src="./images/james.png" alt="James" /></a>
-          <p><strong>Welcome back James</strong></p>
-        </div>
-        {this.props.tasks.shortlistVehicle &&
+        <ProfileCircle />
+        {this.props.tasks.shortlistVehicle ? (
           <section>
             <h3>Vehicles you like</h3>
             <VehicleCard hideCtas={true} />
           </section>
-        }
-        {this.props.tasks.vehicleEnquiry &&
+        ) : (
+          <section>
+            <h3>Vehicles you like</h3>
+            <p>Vehicles you favourite will appear here</p>
+          </section>
+        )}
+        {this.props.tasks.vehicleEnquiry ? (
           <section>
             <h3>Enquiries you've made</h3>
             <p className="large">Your sales advisor will see these and be in touch.</p>
@@ -47,7 +50,12 @@ export class Summary extends React.Component {
               <p className="small text-dark-grey">Enquiry sent {this._getCurrentTime()}</p>
             </div>
           </section>
-        }
+        ) : (
+          <section>
+            <h3>Enquiries you've made</h3>
+            <p className="large">Any vehicle enquires you make will appear here</p>
+          </section>
+        )}
       </div>
     );
   }

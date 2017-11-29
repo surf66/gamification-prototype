@@ -76,6 +76,12 @@ export class App extends React.Component {
                     </li>
                     <li>
                       <Link to="/tasks">
+                        <span className="icon">
+                          <svg className="fill-dark-grey">
+                            <title>Tasks</title>
+                            <use xlinkHref="#icon-mileage"></use>
+                          </svg>
+                        </span>
                         <span className="tab-label">Tasks</span>
                       </Link>
                     </li>

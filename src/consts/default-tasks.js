@@ -1,6 +1,6 @@
 var defaultTasks = {
-  getPreApproved: false,
-  speakToSalesAdvisor: false,
+  getPreApproved: true,
+  speakToSalesAdvisor: true,
   shortlistVehicle: false,
   vehicleEnquiry: false,
   uploadUtilityBill: false,
