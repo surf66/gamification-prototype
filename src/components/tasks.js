@@ -27,17 +27,12 @@ export class Tasks extends React.Component {
     });
     let numberOfCompletedTasks = completedTasks.length;
 
-    let svgStyles = {
-      display: 'block', 
-      width: '100%'
-    }
-
     return (
       <div>
         <ProfileCircle />
         <p className="text-dark-grey text-center">{numberOfCompletedTasks} out of {numberOfTasks} tasks completed</p>
-        <section>
-          <p className={`${this.props.tasks.getPreApproved ? ' complete' : ''}`}>
+        <section className="task-list">
+          <p className={`${this.props.tasks.getPreApproved ? 'complete' : ''}`}>
             <div className={`icon tasks circle ${this.props.tasks.getPreApproved ? 'background-dark-green' : 'background-light-grey'}`}>
               <svg className={`${this.props.tasks.getPreApproved ? 'fill-white' : 'fill-light-grey'}`}>
                 <title>Approved</title>
@@ -46,7 +41,7 @@ export class Tasks extends React.Component {
             </div>
             Get pre-approved for finance
           </p>
-          <p className={`${this.props.tasks.speakToSalesAdvisor ? ' complete' : ''}`}>
+          <p className={`${this.props.tasks.speakToSalesAdvisor ? 'complete' : ''}`}>
             <div className={`icon tasks circle ${this.props.tasks.speakToSalesAdvisor ? 'background-dark-green' : 'background-light-grey'}`}>
               <svg className={`${this.props.tasks.speakToSalesAdvisor ? 'fill-white' : 'fill-light-grey'}`}>
                 <title>Approved</title>
@@ -55,7 +50,7 @@ export class Tasks extends React.Component {
             </div>
             Speak with your sales advisor
           </p>
-          <p className={`${this.props.tasks.shortlistVehicle ? ' complete' : ''}`}>
+          <p className={`${this.props.tasks.shortlistVehicle ? 'complete' : ''}`}>
             <div className={`icon tasks circle ${this.props.tasks.shortlistVehicle ? 'background-dark-green' : 'background-light-grey'}`}>
               <svg className={`${this.props.tasks.shortlistVehicle ? 'fill-white' : 'fill-light-grey'}`}>
                 <title>Approved</title>
@@ -64,7 +59,7 @@ export class Tasks extends React.Component {
             </div>
             Add a vehicle to your shortlist
           </p>
-          <p className={`${this.props.tasks.vehicleEnquiry ? ' complete' : ''}`}>
+          <p className={`${this.props.tasks.vehicleEnquiry ? 'complete' : ''}`}>
             <div className={`icon tasks circle ${this.props.tasks.vehicleEnquiry ? 'background-dark-green' : 'background-light-grey'}`}>
               <svg className={`${this.props.tasks.vehicleEnquiry ? 'fill-white' : 'fill-light-grey'}`}>
                 <title>Approved</title>
@@ -73,7 +68,7 @@ export class Tasks extends React.Component {
             </div>
             Send a vehicle enquiry
           </p>
-          <p className={`${this.props.tasks.uploadUtilityBill ? ' complete' : ''}`}>
+          <p className={`${this.props.tasks.uploadUtilityBill ? 'complete' : ''}`}>
             <div className={`icon tasks circle ${this.props.tasks.uploadUtilityBill ? 'background-dark-green' : 'background-light-grey'}`}>
               <svg className={`${this.props.tasks.uploadUtilityBill ? 'fill-white' : 'fill-light-grey'}`}>
                 <title>Approved</title>
@@ -82,7 +77,7 @@ export class Tasks extends React.Component {
             </div>
             Upload a utility bill so we can verify your bank account
           </p>
-          <p className={`${this.props.tasks.uploadPhotoId ? ' complete' : ''}`}>
+          <p className={`${this.props.tasks.uploadPhotoId ? 'complete' : ''}`}>
             <div className={`icon tasks circle ${this.props.tasks.uploadPhotoId ? 'background-dark-green' : 'background-light-grey'}`}>
               <svg className={`${this.props.tasks.uploadPhotoId ? 'fill-white' : 'fill-light-grey'}`}>
                 <title>Approved</title>
