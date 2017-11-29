@@ -6,6 +6,7 @@ import { completeTask } from '../actions/index';
 import Summary from './summary';
 import YourCars from './your-cars';
 import Search from './search';
+import Notification from './notification';
 import './app.css';
 
 function mapDispatchToProps(dispatch) {
@@ -24,6 +25,7 @@ export class App extends React.Component {
   render() {
     return (
       <div>
+        <Notification />
         <Router>
           <div>
             <header className="zuto-header with-tabs">

@@ -1,11 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { completeTask } from '../actions/index';
+import { completeTask, setNotification } from '../actions/index';
 
 function mapDispatchToProps(dispatch) {
   return ({
-    completeTask: bindActionCreators(completeTask, dispatch)
+    completeTask: bindActionCreators(completeTask, dispatch),
+    setNotification: bindActionCreators(setNotification, dispatch)
   })
 }
 
@@ -76,10 +77,12 @@ export class VehicleCard extends React.Component {
 
   _addToShortlist() {
     this.props.completeTask('shortlistVehicle');
+    this.props.setNotification({ message: 'Added to Your Cars', iconName: 'favourited' });
   }
 
   _enquire() {
     this.props.completeTask('vehicleEnquiry');
+    this.props.setNotification({ message: 'Enquiry sent', iconName: 'tick' });
   }
 }
 
