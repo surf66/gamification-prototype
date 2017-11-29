@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { completeTask } from './actions/index';
-import './App.css';
+import { completeTask } from '../actions/index';
+import './app.css';
 
 function mapDispatchToProps(dispatch) {
   return ({
